@@ -1,0 +1,9 @@
+chore(resilience): harden Claude AI integration; fix embedded kafka test
+
+Details:
+- Harden Claude AI integration with timeouts and Resilience4j (retry + circuit-breaker).
+- Add `ResilienceConfig` to log circuit-breaker state transitions.
+- Configure `RestTemplate` timeouts in `ClaudeAiConfig`.
+- Fail-open-to-LOW behavior implemented in `FraudDetectionService`.
+- Add `UserEventPublisher` and embedded Kafka integration test; fix serializer and Java time handling.
+- Update `pom.xml` for annotation-processor ordering and Resilience4j dependencies.
